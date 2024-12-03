@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 async function getUser() {
-  let result = await axios.get("http://localhost:3000/api");
+  let result = await axios.get("https://674df3fd635bad45618d5148.mockapi.io/mock-data/User");
 
   return result.data;
 }
