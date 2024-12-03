@@ -1,8 +1,8 @@
 import Link from "next/link";
 import axios from "axios";
 
-async function getUser() {
-  let result = await axios.get(`${process.env.ROOT_API}`);
+function getUser() {
+  let result = axios.get(`${process.env.ROOT_API}`);
 
   return result.data;
 }
@@ -16,11 +16,11 @@ export default async function RootPage() {
         Go to second page
       </Link>
 
-      {user.map((userItem) => (
+      {/* {user.map((userItem) => (
         <li key={userItem.us_id}>
           {userItem.us_firstname} | {userItem.us_lastname}
         </li>
-      ))}
+      ))} */}
     </div>
   );
 }
