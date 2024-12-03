@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 async function getUser() {
-  let result = await axios.get("http://localhost:3001/api");
+  let result = await axios.get("http://localhost:3000/api");
 
   return result.data;
 }
