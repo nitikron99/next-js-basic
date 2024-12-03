@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 async function getUser() {
-  let result = await axios.get("https://674df3fd635bad45618d5148.mockapi.io/mock-data/User");
+  let result = await axios.get("http://3.25.197.83:4000/get/personnel");
 
   return result.data;
 }
@@ -31,8 +31,8 @@ export default function SecondPage() {
       </Link>
 
       {user.map((userItem) => (
-        <li key={userItem.us_id}>
-          {userItem.us_firstname} | {userItem.us_lastname}
+        <li key={userItem.pl_id}>
+          {userItem.pl_firstname} | {userItem.pl_lastname}
         </li>
       ))}
     </div>
